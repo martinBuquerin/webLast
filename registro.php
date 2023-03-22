@@ -7,10 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" type="text/css" href="/recursos/fontAw/css/all.css">
-    <link rel="stylesheet" type="text/css" href="recursos/estilo.css">
-    <link rel="stylesheet" type="text/css" href="recursos/bootStrap/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -27,12 +23,12 @@
 <body>
 
     <div class="container-fluid d-flex justify-content-center  pt-4 bg-body rounded" style="width: 100%; height:1000px; ">
-       
-      
+
+
         <div class="row w-50 ">
             <div class="col">
                 <h3>Formulario de registro</h3>
-                <form  action="insertar.php" method="post" class="form-registro" enctype="multipart/form-data">
+                <form action="insertar.php" method="post" class="form-registro" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" class="form-control" name="nombre" id="name">
@@ -54,12 +50,12 @@
                         <input type="password" class="form-control" name="contrasena" id="password">
                     </div>
                     <div class="form-group">
-                  
+
                         <label>Nombre</label>
                         <input type="file" name="foto"><br>
-                        
 
-                        
+
+
                     </div>
                     <div class="form-group">
                         <label for="rol">Rol</label>
@@ -73,18 +69,18 @@
                 </form>
                 <div class="form-group col-md-12">
                     <a href="administrador.php" class="btn btn-success float-end">Volver</a>
-                    
+
                 </div>
             </div>
-         
+
 
         </div>
 
 
     </div>
 
-    
-   
+
+
 </body>
 
 
@@ -96,4 +92,3 @@
 </body>
 
 </html>
-

@@ -5,94 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/recursos/fontAw/css/all.css">
-    <link rel="stylesheet" type="text/css" href="recursos/estilo.css">
-    <link rel="stylesheet" type="text/css" href="recursos/bootStrap/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Mostrar Datos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/c6b31a7173.css" crossorigin="anonymous">
+    <title>miWeb.</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid ">
-            <a class="navbar-brand" href="#"><img style="width: 90px;height: 50px;" src="recursos/imagenes/fotoBarra.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
-                <ul class="navbar-nav me-auto mb-2  ">
-                    <li class="nav-item "><a class="nav-link active" style="width: 390px;" aria-current="page" href="#"> </a></li>
+<nav class="navbar navbar-expand-lg navbar-light p-3" id="menu">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span class="fs-5 text-success fw-bold">miWeB.</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 ml-6 mb-lg-0 " style="width: 500px;">
+          <li class="nav-item " >
+            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#equipo">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#seccion-contacto">Soy profesional</a>
+          </li>
+        </ul>
+        <form class="d-flex">
 
-                    <li class="nav-item ">
-                        <a class="nav-link active" aria-current="page" href="#">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Provincias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Beneficios</a>
-                    </li>
+          <button class="btn btn-success btn-primary-outline-success" type="button"><i class="far fa-user" style="padding-right:4px;"></i>Identifícate</button>
+        </form>
+      </div>
 
-                </ul>
-
-                <ul class="navbar-nav me-auto mb-2  float-end">
-                    <li class="nav-item ">
-
-
-                        <a href="#" style=" font-weight: 600;font-style: normal;" class=" btn btn-success float-end" data-toggle="modal" data-target="#myModal"><i class="far fa-user"></i> Identifícate</a>
-                    </li>
-                </ul>
-
-
-
-
-
-            </div>
-        </div>
-    </nav>
-
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="m-2 ">
-
-                    <button type="button" class="btn float-end" data-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i></button>
-                </div>
-                <div class="modal-body ">
-
-                    <h4 class="modal-title pt-2" style="text-align: center;">Login</h4>
-                    <form class="p-4 mt-4">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Usuario</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="d-flex justify-content-center align-content-center mt-4 ">
-                            <button type="submit" class="btn btn-primary">Entrar</button>
-                        </div>
-                    </form>
-
-
-                </div>
-
-            </div>
-
-        </div>
     </div>
-
-
+  </nav>
     <main>
         <div class="container-fluid m-4 d-flex justify-content-center">
         <div class="row row-cols-auto justify-content-center m-4">
@@ -115,8 +66,8 @@
               
 
                     <div class="row border border-gray border-1 rounded-3 shadow bg-body rounded" style="width: 26rem; margin:5px">
-                        <div class="col mt-1">
-                            <h5 class="card-title"><?php echo $result->nombreEmpresa; ?></h5>
+                        <div class="col mt-2">
+                            <h5 class="card-title pt-4"><?php echo $result->nombreEmpresa; ?></h5>
                             <div class="row">
                                 <div class="col mt-2 ml-2">
                                     <p><?php echo $result->descripcionEmpresa; ?></p>
@@ -124,8 +75,8 @@
                             </div>
                         </div>
 
-                        <div class="col mt-2">
-                        <?php echo "<img src='" . $result->imagen . "' width='50' height='50'>" . "</img>"; ?>
+                        <div class="col mt-2 pt-4" >
+                        <?php echo "<img style='margin-left:40px;' src='" . $result->imagen . "' width='120' height='100'>" . "</img>"; ?>
                             <!--<img height="100" width="80" src="data:image/jpeg;base64,'.base64_encode($result->imagen).'" class="card-img-top" alt="..." />'-->
                         </div>
 
@@ -163,74 +114,78 @@
     </main>
 </body>
 
-<footer class="bg-success fixed-bottom ">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row row-cols-4 justify-content-center">
+<footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap bg-light">
+  <!-- Grid container -->
+  <div class="container p-1">
+    <!--Grid row-->
+    <div class="row row-cols-4 justify-content-center">
 
-            <!--Grid column-->
-            <div class="col m-4 ">
-                <h5 class="text-uppercase mb-0">Legal</h5>
+      <!--Grid column-->
+      <div class="col m-2 ">
+        <h5 class="text-uppercase mb-0">Legal</h5>
 
-                <ul class="list-unstyled  mb-0" style="padding-top: 2em;">
+        <ul class="list-unstyled  mb-0" style="padding-top: 1em;">
 
-                    <li>
-                        <a href="#!" class="text-dark" style="text-decoration: none">Sobre nosotros</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark" style="text-decoration: none">Contacta con nosotros</a>
-                    </li>
+          <li>
+            <a href="#!" class="text-dark" style="text-decoration: none">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark" style="text-decoration: none">Contacta con nosotros</a>
+          </li>
 
-                </ul>
-            </div>
-            <!--Grid column-->
+        </ul>
+      </div>
+      <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col m-4 ">
-                <h5 class="text-uppercase">Sobre Hogami</h5>
+      <!--Grid column-->
+      <div class="col m-2 ">
+        <h5 class="text-uppercase mb-0">Sobre Hogami</h5>
 
-                <ul class="list-unstyled mb-0" style="padding-top: 2em;">
+        <ul class="list-unstyled mb-0" style="padding-top: 1em;">
 
-                    <li>
-                        <a href="#!" class="text-dark" style="text-decoration: none">Aviso legal</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark" style="text-decoration: none">Política de privacidad</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark" style="text-decoration: none">Política de cookies</a>
-                    </li>
+          <li>
+            <a href="#!" class="text-dark" style="text-decoration: none">Aviso legal</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark" style="text-decoration: none">Política de privacidad</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark" style="text-decoration: none">Política de cookies</a>
+          </li>
 
-                </ul>
-            </div>
-            <!--Grid column-->
+        </ul>
+      </div>
+      <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col m-4">
-                <h5 class="text-uppercase mb-0">Sobre Hogami</h5>
+      <!--Grid column-->
+      <div class="col m-2">
+        <h5 class="text-uppercase mb-0">Hogami</h5>
 
-                <ul class="list-unstyled" style="padding-top: 2em;">
+        <ul class="list-unstyled" style="padding-top: 1em;">
 
-                    <li>
-                        <a href="#!" class="text-dark" style="text-decoration: none">¿Cómo funciona?</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark" style="text-decoration: none">FAQs</a>
-                    </li>
+          <li>
+            <a href="#!" class="text-dark" style="text-decoration: none">¿Cómo funciona?</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark" style="text-decoration: none">FAQs</a>
+          </li>
 
-                </ul>
-            </div>
-            <!--Grid column-->
-        </div>
-        <!--Grid row-->
+        </ul>
+      </div>
+      <!--Grid column-->
     </div>
-    <!-- Grid container -->
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
 
 
 </footer>
-<script src="recursos/bootStrap/js/bootstrap.min.js"></script>
-<script src="recursos/java.js"></script>
-<script src="recursos/fontAw/js/all.js"></script>
+
+
+
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c6b31a7173.js" crossorigin="anonymous"></script>
+  <script src="javaType.js"></script>
 
 </html>

@@ -35,14 +35,11 @@ if (!isset($_GET['id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="lb/css/bootstrap.min.css" />
   <title>Editar</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <?php session_start(); ?>
 
 </head>
 
 <body>
+
   <div class="container">
     <form action="updateUsuario.php" method="post" class="form-registro" enctype="multipart/form-data">
         <div class="form-row">
@@ -72,9 +69,7 @@ if (!isset($_GET['id'])) {
           </div>
           
         </div>
-        <?php 
-        if ($persona->roles_idRol == 9){
-        ?>
+      
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="nombreEmpresa">Nombre de la empresa</label>
@@ -85,9 +80,7 @@ if (!isset($_GET['id'])) {
             <input type="text" class="form-control" id="descripcionEmpresa" name="descripcionEmpresa" placeholder="Descripcion Empresa" value="<?php echo $persona->descripcionEmpresa; ?>">
           </div>
         </div>
-        <?php 
-        }
-        ?>
+   
         <div class="form-group col-md-6">
             <label>Imagen</label>
             <input type="file" name="foto"><br>
@@ -103,7 +96,7 @@ if (!isset($_GET['id'])) {
 
 
 
-
+      <table>
         <div class="mb-3 mt-3 justify-content:center;">
           <tr>
 
